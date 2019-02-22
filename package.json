@@ -1,0 +1,22 @@
+{
+  "name": "buttonsbuilder",
+  "version": "1.0.0",
+  "description": "Simply tool for web developers to build buttons.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnyMielony07/buttonsBuilder.git"
+  },
+  "author": "Jan Latoch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohnyMielony07/buttonsBuilder/issues"
+  },
+  "homepage": "https://github.com/JohnyMielony07/buttonsBuilder#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
