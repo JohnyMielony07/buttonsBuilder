@@ -1,5 +1,8 @@
 //COLORS
-
+$color-light-grey-1: #d0d0d0;
+$color-primary-1: #e1dfdf;
+$color-primary-2: #f8f8f8;
+$font-primary:'Tinos', serif;
 
 //RESET
 *,
@@ -13,5 +16,17 @@
 
 html {
     font-size: 62.5%; //1rem = 10px; 10px/16px = 62.5%
+}
 
+body {
+    //background-color: $color-secondary-1-1;
+    background-color: $color-light-grey-1;
+   // font-family: $font-primary;
+}
+
+.wrapper {
+    background-color: $color-primary-2;
+    width: 70%;
+    margin: 2rem auto;
+    box-shadow: 0 0rem 3rem rgba($color-primary-1, .65);
 }
