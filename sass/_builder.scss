@@ -1,0 +1,28 @@
+.builder__controls {
+    width: 55%;
+    margin-left: 3rem;
+    padding-top: 2rem;
+}
+
+.control__title {
+    background-color: $color-primary-1;
+    border-radius: .7rem;
+    padding: 1rem;
+    display: flex;
+}
+
+.title {
+    color: $color-dark-1;
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: inline;
+}
+
+.input-title {
+    border: none;
+    border-radius: .2rem;
+    margin-left: .5rem;
+    height: 2rem;
+    padding-left: .5rem;
+    width: 100%;
+}
