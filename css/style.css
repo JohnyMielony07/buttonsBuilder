@@ -8,7 +8,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  background-color: #d0d0d0; }
+  background-color: #d0d0d0;
+  font-family: "Roboto", sans-serif; }
 
 .wrapper {
   background-color: #f8f8f8;
@@ -16,11 +17,48 @@ body {
   margin: 2rem auto;
   box-shadow: 0 0rem 3rem rgba(225, 223, 223, 0.65); }
 
+.main-title {
+  display: none; }
+
 .logo {
   width: 50%;
   margin: auto;
   text-align: center;
-  padding: 4em 0; }
+  padding: 4rem 0; }
 
 .logo__img {
-  width: 30em; }
+  width: 30rem; }
+
+.secondary-title {
+  color: #919191;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500; }
+
+.type-select {
+  padding: 2rem 10rem; }
+
+.type-select__buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem; }
+
+.type-select__button {
+  font-size: 1.8rem;
+  border: none;
+  padding: .8rem 3rem;
+  color: white;
+  background-color: #37b349;
+  box-shadow: 0 0rem 0.5rem #919191; }
+
+.type-select__button:hover {
+  cursor: pointer; }
+
+.type-select__button--rounded {
+  border-radius: .7rem; }
+
+.type-select__button--square-empty {
+  background-color: #f8f8f8;
+  color: #37b349;
+  border: 0.2rem solid #37b349;
+  box-sizing: border-box; }

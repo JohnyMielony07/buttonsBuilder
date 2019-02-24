@@ -2,7 +2,10 @@
 $color-light-grey-1: #d0d0d0;
 $color-primary-1: #e1dfdf;
 $color-primary-2: #f8f8f8;
-$font-primary:'Tinos', serif;
+$color-primary-3: #919191;
+$font-primary: 'Roboto', sans-serif;
+$color-green-1: #37b349;
+
 
 //RESET
 *,
@@ -21,7 +24,7 @@ html {
 body {
     //background-color: $color-secondary-1-1;
     background-color: $color-light-grey-1;
-   // font-family: $font-primary;
+    font-family: $font-primary;
 }
 
 .wrapper {
@@ -29,4 +32,8 @@ body {
     width: 70%;
     margin: 2rem auto;
     box-shadow: 0 0rem 3rem rgba($color-primary-1, .65);
+}
+
+.main-title {
+    display: none;
 }

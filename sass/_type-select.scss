@@ -1,0 +1,41 @@
+.secondary-title {
+    color: $color-primary-3;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.type-select {
+    padding: 2rem 10rem;
+
+}
+
+.type-select__buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.type-select__button {
+    font-size: 1.8rem;
+    border: none;
+    padding: .8rem 3rem;
+    color: white;
+    background-color: $color-green-1;
+    box-shadow: 0 0rem .5rem rgba($color-primary-3, 1);
+}
+
+.type-select__button:hover {
+    cursor: pointer;
+}
+
+.type-select__button--rounded {
+    border-radius: .7rem;
+}
+
+.type-select__button--square-empty {
+    background-color: $color-primary-2;
+    color: $color-green-1;
+    border: .2rem solid $color-green-1;
+    box-sizing: border-box;
+}
