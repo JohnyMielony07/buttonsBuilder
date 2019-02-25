@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Buttons Builder</title>
 </head>
+
 <body>
     <div class="wrapper">
         <h1 class="main-title">Buttons Builder</h1>
@@ -23,19 +25,48 @@
             </div>
         </section>
         <section class="builder">
-                <h2 class="secondary-title builder__title">Build by yourself:</h2>
-                <div class="builder-wrapper">
-                        <div class="builder__controls">
-                            <div class="control__title">
-                                <p class="title">Title:</p>
-                                <input class="input-title" type="text" name="title" id="title">
+            <h2 class="secondary-title builder__title">Build by yourself:</h2>
+            <div class="builder-wrapper">
+                <div class="builder__controls">
+                    <div class="control__title">
+                        <p class="title">Title:</p>
+                        <input class="input-title" type="text" name="title" id="title">
+                    </div>
+                    <div class="control__button-container">
+                        <div class="control__button control__button--link">
+                            <div class="container-input container-input--text-color">
+                                <p class="input-text input-text--text-color">Text color:</p>
+                                <input type="color" name="text-color" id="text-color">
+                            </div>
+                            <div class="container-input container-input--bkg-color">
+                                <p class="input-text input-text--bkg-color">Bkg color:</p>
+                                <input type="color" name="bkg-color" id="bkg-color">
+                            </div>
+                            <div class="container-input container-input--border-radius">
+                                <p class="input-text input-text--border-radius">Border radius:</p>
+                                <input class="border-radius" type="number" name="border-radius" id="border-radius">
+                                <p class="input-text input-text--border-radius">px</p>
+                            </div>
+                            <div class="container-input container-input--border-color">
+                                <p class="input-text input-text--border-color">Border color:</p>
+                                <input type="color" name="border-color" id="border-color">
+                            </div>
+                            <div class="container-input container-input--border-width">
+                                <p class="input-text input-text--border-width">Border width:</p>
+                                <input class="border-width" type="number" name="border-width" id="border-width">
+                                <p class="input-text input-text--border-width">px</p>
                             </div>
                         </div>
+                        <div class="control__button control__button--hover">ppp</div>
+                    </div>
 
                 </div>
-                
+
+            </div>
+
         </section>
     </div>
-    
+
 </body>
+
 </html>

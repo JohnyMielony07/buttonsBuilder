@@ -67,7 +67,9 @@ body {
 .builder__controls {
   width: 55%;
   margin-left: 3rem;
-  padding-top: 2rem; }
+  padding-top: 2rem;
+  color: #737373;
+  font-size: 1.5rem; }
 
 .control__title {
   background-color: #e1dfdf;
@@ -76,8 +78,6 @@ body {
   display: flex; }
 
 .title {
-  color: #737373;
-  font-size: 1.5rem;
   font-weight: 500;
   display: inline; }
 
@@ -88,3 +88,25 @@ body {
   height: 2rem;
   padding-left: .5rem;
   width: 100%; }
+
+.control__button {
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: #e1dfdf;
+  border-radius: .7rem;
+  width: 48%;
+  box-sizing: border-box; }
+
+.control__button-container {
+  display: flex;
+  justify-content: space-between; }
+
+.container-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: .5rem 0; }
+
+.border-radius,
+.border-width {
+  width: 30%; }

@@ -2,6 +2,8 @@
     width: 55%;
     margin-left: 3rem;
     padding-top: 2rem;
+    color: $color-dark-1;
+    font-size: 1.5rem;
 }
 
 .control__title {
@@ -12,8 +14,6 @@
 }
 
 .title {
-    color: $color-dark-1;
-    font-size: 1.5rem;
     font-weight: 500;
     display: inline;
 }
@@ -25,4 +25,34 @@
     height: 2rem;
     padding-left: .5rem;
     width: 100%;
+}
+
+.control__button {
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: $color-primary-1;
+    border-radius: .7rem;
+    width: 48%;
+    box-sizing: border-box;
+}
+
+.control__button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+// .control__button--link {
+
+// }
+
+.container-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .5rem 0;
+}
+
+.border-radius,
+.border-width {
+    width: 30%;
 }
