@@ -56,3 +56,23 @@
 .border-width {
     width: 30%;
 }
+
+.builder-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.final-button__container {
+    width: 40%;
+}
+
+.final-button__button {
+    display: block;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    border: none;
+    padding: .8rem 3rem;
+    color: white;
+    background-color: $color-green-1;
+    border-radius: .7rem;
+}
