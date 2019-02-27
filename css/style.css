@@ -127,3 +127,16 @@ body {
   color: white;
   background-color: #37b349;
   border-radius: .7rem; }
+
+.generate {
+  padding: 2rem; }
+
+.generate__button {
+  display: block;
+  margin: 2rem auto 2rem auto;
+  font-size: 1.8rem;
+  border: none;
+  padding: .8rem 3rem;
+  color: white;
+  background-color: #37b349;
+  border-radius: .7rem; }
