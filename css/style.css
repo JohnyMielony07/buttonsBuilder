@@ -140,3 +140,26 @@ body {
   color: white;
   background-color: #37b349;
   border-radius: .7rem; }
+
+.generated-code {
+  display: flex;
+  margin: 0 3rem;
+  justify-content: space-between; }
+
+.generated-code__container {
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: #e1dfdf;
+  border-radius: .7rem;
+  width: 48%;
+  box-sizing: border-box; }
+
+.generated-code__title {
+  text-align: center;
+  color: #737373;
+  padding-bottom: 1rem; }
+
+.generated-code__code {
+  background-color: #f8f8f8;
+  padding: .5rem;
+  color: #737373; }
