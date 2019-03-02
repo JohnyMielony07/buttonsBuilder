@@ -1,12 +1,12 @@
 const titleInput = document.getElementById('title');
-const buttonTitle = document.getElementById('button');
+const textColorInput = document.getElementById('text-color');
+const button = document.getElementById('button');
 
-var buttonTitleChange = () => {    
-    titleValue = titleInput.value;
-    console.log(titleValue);
-    buttonTitle.innerText = titleValue;
-}
 
 titleInput.addEventListener('input', () => {
-    buttonTitleChange();
+    button.innerText = titleInput.value;
+});
+
+textColorInput.addEventListener('input', () => {
+    button.style.color = textColorInput.value;
 });
