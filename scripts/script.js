@@ -4,11 +4,15 @@ const backgroundColorInput = document.getElementById('bkg-color');
 const borderRadiusInput = document.getElementById('border-radius');
 const borderColorInput = document.getElementById('border-color');
 const borderWidthInput = document.getElementById('border-width');
+const hoverTextColorInput = document.getElementById('text-color-hover');
 
+const generatedHtml = document.getElementById('generatedHtml');
 const button = document.getElementById('button');
 
 titleInput.addEventListener('input', () => {
     button.innerText = titleInput.value;
+    console.log(button);    
+    generatedHtml.innerText = generateHtml(titleInput.value);
 });
 
 textColorInput.addEventListener('input', () => {
@@ -31,3 +35,8 @@ borderWidthInput.addEventListener('input', () => {
     button.style.borderWidth = borderWidthInput.value + 'px';
     button.style.borderStyle = 'solid';
 })
+
+let generateHtml = (text) => {
+    let generatedHtml = '<button class="myButton">' + text + '</button>';
+    return generatedHtml;
+}
