@@ -6,37 +6,60 @@ const borderColorInput = document.getElementById('border-color');
 const borderWidthInput = document.getElementById('border-width');
 const hoverTextColorInput = document.getElementById('text-color-hover');
 
-const generatedHtml = document.getElementById('generatedHtml');
+const generatedHtmlCont = document.getElementById('generatedHtml');
+const generatedCssCont = document.getElementById('generatedCss');
 const button = document.getElementById('button');
 
-titleInput.addEventListener('input', () => {
-    button.innerText = titleInput.value;
-    console.log(button);    
-    generatedHtml.innerText = generateHtml(titleInput.value);
-});
 
-textColorInput.addEventListener('input', () => {
-    button.style.color = textColorInput.value;
-});
+document.addEventListener('DOMContentLoaded', function () {
+    generateCss();
+    generateHtml('Button');
 
-backgroundColorInput.addEventListener('input', () => {
-    button.style.backgroundColor = backgroundColorInput.value;
-});
+    titleInput.addEventListener('input', () => {
+        button.innerText = titleInput.value;
+        console.log(button);
+        generateHtml(titleInput.value);
+    });
 
-borderRadiusInput.addEventListener('input', () => {
-    button.style.borderRadius = borderRadiusInput.value + 'px';
-});
+    textColorInput.addEventListener('input', () => {
+        button.style.color = textColorInput.value;
+        generateCss();
+    });
 
-borderColorInput.addEventListener('input', () => {
-    button.style.borderColor = borderColorInput.value;
+    backgroundColorInput.addEventListener('input', () => {
+        button.style.backgroundColor = backgroundColorInput.value;
+        generateCss();
+    });
+
+    borderRadiusInput.addEventListener('input', () => {
+        button.style.borderRadius = borderRadiusInput.value + 'px';
+        generateCss();
+    });
+
+    borderColorInput.addEventListener('input', () => {
+        button.style.borderColor = borderColorInput.value;
+        generateCss();
+    })
+
+    borderWidthInput.addEventListener('input', () => {
+        button.style.borderWidth = borderWidthInput.value + 'px';
+        button.style.borderStyle = 'solid';
+        generateCss();
+    })
+
+    function generateHtml(text) {
+        let generatedHtml = '<button class="myButton">' + text + '</button>';
+        generatedHtmlCont.innerText = generatedHtml;
+    }
+
+    function generateCss() {
+        let generatedCss = '.myButton {\n' +
+            'color: ' + textColorInput.value + ';\n' +
+            'background-color: ' + backgroundColorInput.value + ';\n' +
+            'border-radius: ' + borderRadiusInput.value + 'px;\n' +
+            'border-color: ' + borderColorInput.value + ';\n' +
+            'border-width: ' + borderWidthInput.value + 'px;\n' +
+            'border-style: solid;\n}';
+        generatedCssCont.innerText = generatedCss;
+    }
 })
-
-borderWidthInput.addEventListener('input', () => {
-    button.style.borderWidth = borderWidthInput.value + 'px';
-    button.style.borderStyle = 'solid';
-})
-
-let generateHtml = (text) => {
-    let generatedHtml = '<button class="myButton">' + text + '</button>';
-    return generatedHtml;
-}
