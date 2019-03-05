@@ -54,6 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function generateCss() {
         let generatedCss = '.myButton {\n' +
+            'padding: 8px 30px;\n' +
+            'font-size: 1.8rem;\n' +
             'color: ' + textColorInput.value + ';\n' +
             'background-color: ' + backgroundColorInput.value + ';\n' +
             'border-radius: ' + borderRadiusInput.value + 'px;\n' +
