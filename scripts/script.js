@@ -6,6 +6,9 @@ const borderColorInput = document.getElementById('border-color');
 const borderWidthInput = document.getElementById('border-width');
 const hoverTextColorInput = document.getElementById('text-color-hover');
 
+const btnRounded = document.getElementById('btn-rounded');
+const btnSquare = document.getElementById('btn-square');
+const btnEmpty = document.getElementById('btn-empty');
 const generatedHtmlCont = document.getElementById('generatedHtml');
 const generatedCssCont = document.getElementById('generatedCss');
 const button = document.getElementById('button');
@@ -14,6 +17,33 @@ const button = document.getElementById('button');
 document.addEventListener('DOMContentLoaded', function () {
     generateCss();
     generateHtml('Button');
+
+    btnRounded.addEventListener('click', () => {
+        borderRadiusInput.value = 7;
+        button.style.borderRadius = borderRadiusInput.value + 'px';
+        generateCss();
+    })
+
+    btnSquare.addEventListener('click', () => {
+        borderRadiusInput.value = 0;
+        button.style.borderRadius = borderRadiusInput.value + 'px';
+        generateCss();
+    })
+
+    btnEmpty.addEventListener('click', () => {
+        borderRadiusInput.value = 0;
+        button.style.borderRadius = borderRadiusInput.value + 'px';
+        textColorInput.value = '#37b349';
+        button.style.color = textColorInput.value;
+        backgroundColorInput.value = '#ffffff';
+        button.style.backgroundColor = backgroundColorInput.value;
+        borderColorInput.value = '#37b349';
+        button.style.borderColor = borderColorInput.value;
+        borderWidthInput.value = 2;
+        button.style.borderWidth = borderWidthInput.value + 'px';
+        button.style.borderStyle = 'solid';
+        generateCss();
+    })
 
     titleInput.addEventListener('input', () => {
         button.innerText = titleInput.value;
