@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // generate text color   
         generateTextColor();
         generateBkgColor();
+        generateBorderRadius();
         generateCss();
     })
 })
@@ -113,6 +114,14 @@ const generateBkgColor = () => {
     const colors = generateRgbColor();     
     button.style.backgroundColor = 'rgb(' + colors[0] + ', ' + colors[1] + ', ' + colors[2] + ')';
     backgroundColorInput.value = rgbToHex(colors[0], colors[1], colors[2]);
+    button.style.borderColor = 'rgb(' + colors[0] + ', ' + colors[1] + ', ' + colors[2] + ')';
+    borderColorInput.value = rgbToHex(colors[0], colors[1], colors[2]);
+}
+
+const generateBorderRadius = () => {
+    const randomNumber = Math.floor((Math.random() * 8));
+    button.style.borderRadius = randomNumber + 'px';
+    borderRadiusInput.value = randomNumber;
 }
 
 const generateRgbColor = () => {
