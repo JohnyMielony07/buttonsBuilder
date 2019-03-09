@@ -12,7 +12,7 @@ const btnEmpty = document.getElementById('btn-empty');
 const generatedHtmlCont = document.getElementById('generatedHtml');
 const generatedCssCont = document.getElementById('generatedCss');
 const button = document.getElementById('button');
-
+const generateButton = document.getElementById('generate-button');
 
 document.addEventListener('DOMContentLoaded', function () {
     generateCss();
@@ -94,4 +94,28 @@ document.addEventListener('DOMContentLoaded', function () {
             'border-style: solid;\n}';
         generatedCssCont.innerText = generatedCss;
     }
+
+    generateButton.addEventListener('click', () => {
+        // generate text color   
+        let colors = generateColor();     
+        button.style.color = 'rgb(' + colors[0] + ', ' + colors[1] + ', ' + colors[2] + ')';
+        textColorInput.value = rgbToHex(colors[0], colors[1], colors[2]);
+        generateCss();
+    })
 })
+
+let generateColor = () => {
+    const red = Math.floor((Math.random() * 255));
+    const green = Math.floor((Math.random() * 255));
+    const blue = Math.floor((Math.random() * 255));
+    return [red, green, blue];    
+}
+
+const rgbToHex = (r, g, b) => {
+    colorsHex = [r, g, b].map(color => {
+        const hex = color.toString(16);
+        return hex.length === 1 ? '0' + hex : hex;
+      });
+    return '#' + colorsHex.join('');
+}
+
