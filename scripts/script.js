@@ -97,14 +97,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
     generateButton.addEventListener('click', () => {
         // generate text color   
-        let colors = generateColor();     
-        button.style.color = 'rgb(' + colors[0] + ', ' + colors[1] + ', ' + colors[2] + ')';
-        textColorInput.value = rgbToHex(colors[0], colors[1], colors[2]);
+        generateTextColor();
+        generateBkgColor();
         generateCss();
     })
 })
 
-let generateColor = () => {
+const generateTextColor = () => {
+    const colors = generateRgbColor();     
+    button.style.color = 'rgb(' + colors[0] + ', ' + colors[1] + ', ' + colors[2] + ')';
+    textColorInput.value = rgbToHex(colors[0], colors[1], colors[2]);
+}
+
+const generateBkgColor = () => {
+    const colors = generateRgbColor();     
+    button.style.backgroundColor = 'rgb(' + colors[0] + ', ' + colors[1] + ', ' + colors[2] + ')';
+    backgroundColorInput.value = rgbToHex(colors[0], colors[1], colors[2]);
+}
+
+const generateRgbColor = () => {
     const red = Math.floor((Math.random() * 255));
     const green = Math.floor((Math.random() * 255));
     const blue = Math.floor((Math.random() * 255));
